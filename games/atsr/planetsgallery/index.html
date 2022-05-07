@@ -6,291 +6,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Planets Gallery</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Major+Mono+Display"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <article class="card card--mercury">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
+    <div class="overlay"></div>
+    <div class="timer">0 seconds</div>
+    <div class="intro modal">
+      <div class="intro modal_inner">
+        <div class="intro modal_inner__close c_modal st">x</div>
+        <div class="intro modal_inner__title">
+          <h2>Planet quiz</h2>
+        </div>
+        <div class="intro modal_inner__text">
+          <p>Drag the planets in the correct order as fast as you can!</p>
+        </div>
+        <div class="intro modal_inner__image">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/sdfsdfsdf.gif"
+          />
+        </div>
+        <div class="intro modal_inner__cta c_modal">
+          <button class="st">Lets go!</button>
         </div>
       </div>
-      <div class="card__info">
-        <h2 class="info__title">mercury</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">0.034° </span>
+    </div>
+    <div class="winner modal">
+      <div class="winner modal_inner">
+        <div class="winner modal_inner__title">
+          <h2>
+            Well done, you won in
+            <span class="t">10.00</span>
+          </h2>
+        </div>
+        <div class="winner modal_inner__text">
+          <p>
+            You are a proper clever cloggs! Why not share this with a friend and
+            see if they are as smart as you!
+          </p>
+        </div>
+        <div class="winner modal_inner__cta">
+          </button>
+          <button class="tw">Tweet</button>
+          <button class="fb">Share on facebook</button>
+        </div>
+        <div class="winner modal_inner__restart"></div>
+      </div>
+    </div>
+    <div class="planets">
+      <div class="planets_stars"></div>
+      <div class="planets_container">
+        <div class="planets_container__title">
+          <h1>Planets quiz</h1>
+        </div>
+        <div class="planets_container__title">
+          <h3>Drag the planets into the correct order</h3>
+        </div>
+        <div class="planets_container__planets">
+          <div class="planet_wrap">
+            <div class="planet" data-planet="venus">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_venus.png"
+              />
+            </div>
+            <span>Venus</span>
           </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">1,407 hours</span>
+          <div class="planet_wrap">
+            <div class="planet" data-planet="earth">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_earth.png"
+              />
+            </div>
+            <span>Earth</span>
           </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">88 days</span>
+          <div class="planet_wrap">
+            <div class="planet" data-planet="saturn">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_saturn.png"
+              />
+            </div>
+            <span>Saturn</span>
+          </div>
+          <div class="planet_wrap">
+            <div class="planet" data-planet="neptune">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_neptune.png"
+              />
+            </div>
+            <span>Neptune</span>
+          </div>
+          <div class="planet_wrap">
+            <div class="planet" data-planet="mercury">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mercury.png"
+              />
+            </div>
+            <span>Mercury</span>
+          </div>
+          <div class="planet_wrap">
+            <div class="planet" data-planet="mars">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mars.png"
+              />
+            </div>
+            <span>Mars</span>
+          </div>
+          <div class="planet_wrap">
+            <div class="planet" data-planet="jupiter">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_jupiter.png"
+              />
+            </div>
+            <span>Jupiter</span>
+          </div>
+          <div class="planet_wrap">
+            <div class="planet" data-planet="uranus">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_uranus.png"
+              />
+            </div>
+            <span>Uranus</span>
           </div>
         </div>
-      </div>
-    </article>
-    <article class="card card--venus">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
+        <div class="planets_container__quiz">
+          <div class="planet_holder sun null" data-planet="sun">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_sun.png"
+              />
+            </div>
+          </div>
+          <div class="planet_holder mercury" data-planet="mercury">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mercury.png"
+              />
+            </div>
+          </div>
+          <div class="planet_holder venus" data-planet="venus">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_venus.png"
+              />
+            </div>
+          </div>
+          <div class="planet_holder earth" data-planet="earth">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_earth.png"
+              />
+            </div>
+          </div>
+          <div class="planet_holder mars" data-planet="mars">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mars.png"
+              />
+            </div>
+          </div>
+          <div class="planet_holder jupiter" data-planet="jupiter">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_jupiter.png"
+              />
+            </div>
+          </div>
+          <div class="planet_holder saturn" data-planet="saturn">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_saturn.png"
+              />
+            </div>
+          </div>
+          <div class="planet_holder uranus" data-planet="uranus">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_uranus.png"
+              />
+            </div>
+          </div>
+          <div class="planet_holder neptune" data-planet="neptune">
+            <span>?</span>
+            <div class="planet_answer">
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_neptune.png"
+              />
+            </div>
+          </div>
+          <div class="btns">
+      <button class="button-19"><a href="/space.html">Previous</a></button>
+      <button class="button-19"><a href="/games/atsr/solarsystem/index.html">Next</a></button>
+    </div>
         </div>
       </div>
-      <div class="card__info">
-        <h2 class="info__title">venus</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">177.3° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">5,832 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">224.7 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="card card--earth">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
-        </div>
-      </div>
-      <div class="card__info">
-        <h2 class="info__title">earth</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">23.26° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">23.9 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">365.2 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="card card--mars">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
-        </div>
-      </div>
-      <div class="card__info">
-        <h2 class="info__title">mars</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">25.2° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">24.6 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">687 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="card card--jupiter">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
-        </div>
-      </div>
-      <div class="card__info">
-        <h2 class="info__title">jupiter</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">3.1° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">9.9 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">4,331 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="card card--saturn">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
-        </div>
-      </div>
-      <div class="card__info">
-        <h2 class="info__title">saturn</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">26.7° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">10.7 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">10,747 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="card card--uranus">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
-        </div>
-      </div>
-      <div class="card__info">
-        <h2 class="info__title">uranus</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">97.8° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">17.2 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">30,589 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="card card--neptune">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
-        </div>
-      </div>
-      <div class="card__info">
-        <h2 class="info__title">neptune</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">28.3° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">16.1 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">59,800 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="card card--pluto">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
-        </div>
-      </div>
-      <div class="card__info">
-        <h2 class="info__title">pluto</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">122.5° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">153.3 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">90,560 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="card card--sun">
-      <div class="card__planet">
-        <div class="planet__atmosphere">
-          <div class="planet__surface"></div>
-        </div>
-      </div>
-      <div class="card__info">
-        <h2 class="info__title">sun</h2>
-        <div class="info__form">
-          <div class="info__item">
-            <label class="info__label">Tilt</label
-            ><span class="info__line"></span
-            ><i class="tilt__icon fas fa-long-arrow-alt-right"></i
-            ><span class="info__detail">0° </span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Day</label
-            ><span class="info__line"></span
-            ><span class="info__detail">~600 hours</span>
-          </div>
-          <div class="info__item">
-            <label class="info__label">Year</label
-            ><span class="info__line"></span
-            ><span class="info__detail">0 days</span>
-          </div>
-        </div>
-      </div>
-    </article>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
