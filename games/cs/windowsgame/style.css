@@ -9,6 +9,7 @@ body {
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  width: 50%;
 }
 
 footer.footer i {
