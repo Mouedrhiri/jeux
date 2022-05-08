@@ -9,6 +9,10 @@ body {
   background-position: center;
   background-size: cover;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+  width: 50%;
+>>>>>>> cb29c4ee3f2bb0907b300a8335ab2a01083fe3a4
 }
 
 footer.footer i {
