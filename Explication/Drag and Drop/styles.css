@@ -1,0 +1,32 @@
+#drag {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 10px;
+  background-color: aqua;
+  padding: 10px;
+}
+#non-drop {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 10px;
+  background-color: orange;
+  padding: 10px;
+}
+#drop {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin: 10px;
+  background-color: yellow;
+  padding: 10px;
+}
+#drop2 {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin: 10px;
+  background-color: yellow;
+  padding: 10px;
+}
