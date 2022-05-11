@@ -8,7 +8,7 @@ html {
 
 body,
 #App {
-  height: 100vh;
+    height: 100vh;
   background: #f6f8f8;
   color: #37474f;
   font-weight: 300;

@@ -3,11 +3,12 @@
 }
 body {
   text-align: center;
-  background-color: #68a7ad;
+  background-color:  #B4FF9F ;
   color: white;
   font-size: 40px;
   font-family: "Courier New", Courier, monospace;
 }
+
 .content {
   margin-top: 15%;
 }
@@ -15,13 +16,13 @@ body {
   padding: 10px;
 }
 .content h3 span {
-  color: #187498;
+  color: #FFA8A8;
   margin-right: 5px;
 }
 
 .button-19 {
   appearance: button;
-  background-color: #1899d6;
+  background-color: #1cb0f6;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
@@ -79,5 +80,6 @@ body {
 }
 
 .button-19:disabled {
-  cursor: auto;
-}
+  cursor: auto;}
+
+
